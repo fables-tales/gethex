@@ -21,7 +21,7 @@ def get_hexes():
     hexes = []
 
     #find all the hex strings in that string
-    for x in string.split("\n"):
+    for x in string.rsplit():
         if ishexonly(x) and x != "":
             if x not in hexes:
                 hexes.append(x)
