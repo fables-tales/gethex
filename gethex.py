@@ -15,7 +15,8 @@ def get_hexes():
 
     #put the comments in a giant string
     for comment in json_obj[1]["data"]["children"]:
-        string += comment["data"]["body"] + "\n"
+        if comment["data"].has_key("body"):
+            string += comment["data"]["body"] + "\n"
 
     hexes = []
 
